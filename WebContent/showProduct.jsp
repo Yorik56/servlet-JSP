@@ -10,7 +10,7 @@
 <title>showProduct JSP</title>
 </head>
 <body>
-
+<%@ include file = "header.jsp" %>
 <%
 
 
@@ -35,6 +35,6 @@ Product product = ProductDao.findProduct(idLong);
 out.println("Product: " + product.getId());
 
 %>
-
+<%@ include file = "footer.jsp" %>
 </body>
 </html>

@@ -17,6 +17,6 @@ public class LoginServlet extends HttpServlet {
 		String username = req.getParameter("username");
 		System.out.println(username);
 		req.getSession().setAttribute("username", username);
-		resp.sendRedirect(req.getContextPath() + "/listProduct");
+		resp.sendRedirect(req.getContextPath() + "/listProduct.jsp");
 	}
 }

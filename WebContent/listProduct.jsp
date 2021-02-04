@@ -11,6 +11,8 @@
 </head>
 <body>
 <%@ include file = "header.jsp" %>
+<br>
+<br>
 <%
 
 
@@ -18,11 +20,13 @@
 
 	
 	for(Product p : products) {
+		out.println("<p>");
 		out.println(p.getId()+" -> "+p.getName()+" -> "+p.getPrice()+"€ ->"+p.getDescription());
-		
+		out.println("</p>");
 	}
 
 %>
+<br>
 <%@ include file = "footer.jsp" %>
 </body>
 </html>
