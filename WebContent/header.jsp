@@ -1,4 +1,4 @@
-<a href="/ProductManager/listProduct.jsp">List product</a>
+<a href="/ProductManager/listProduct">List product</a>
 <a href="/ProductManager/auth/addProduct.jsp">Add product</a>
 
 

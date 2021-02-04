@@ -37,6 +37,8 @@ public class ShowProductServlet extends HttpServlet {
 		
 		System.out.println("New parameter is :" + idLong );
 		Product product = ProductDao.findProduct(idLong);
-		out.println("Product: " + product.getId());
+		req.setAttribute("product", product);
+		req.getRequestDispatcher("showProduct.jsp").forward(req, resp);
+//		out.println("Product: " + product.getId());
 	}
 }

@@ -3,6 +3,7 @@
         <%@ page import="fr.mds.productmanager.dao.ProductDao" %>
     <%@ page import="java.util.List" %>
     <%@ page import="fr.mds.productmanager.model.Product" %>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,30 +12,16 @@
 </head>
 <body>
 <%@ include file = "header.jsp" %>
-<%
+<table>
 
+	<tr>
+		<td><c:out value="${product.id }"></c:out></td>
+		<td><c:out value="${product.name }"></c:out></td>
+		<td><c:out value="${product.price }"></c:out></td>
+		<td><c:out value="${product.description}"></c:out></td>
+	</tr>
 
-String idStr = request.getParameter("id");
-
-if(idStr == null) {
-	out.println("missing id parameter");
-	return;			
-}
-
-Long idLong = null;
-
-try {
-	idLong = Long.parseLong(idStr);			
-} catch(NumberFormatException  e) {
-	out.println("Parameter 'id' is not a long");
-	return;
-}
-
-System.out.println("New parameter is :" + idLong );
-Product product = ProductDao.findProduct(idLong);
-out.println("Product: " + product.getId());
-
-%>
+</table>
 <%@ include file = "footer.jsp" %>
 </body>
 </html>

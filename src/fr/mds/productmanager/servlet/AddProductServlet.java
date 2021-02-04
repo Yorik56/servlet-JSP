@@ -24,7 +24,7 @@ public class AddProductServlet extends HttpServlet{
 			Product p = new Product(productName, productDescritption, productPriceFloat);
 			ProductDao.addProduct(p);
 			
-			resp.sendRedirect(req.getContextPath() + "/showProduct.jsp?id=" + p.getId());
+			resp.sendRedirect(req.getContextPath() + "/showProduct?id=" + p.getId());
 			
 	}
 }

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import fr.mds.productmanager.dao.ProductDao;
 import fr.mds.productmanager.model.Product;
 
-@SuppressWarnings("serial")
+@SuppressWarnings({ "serial", "unused" })
 @WebServlet(urlPatterns = ("/listProduct"))
 public class ListProductServlet extends HttpServlet {
 
