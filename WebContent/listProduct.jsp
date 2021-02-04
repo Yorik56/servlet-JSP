@@ -3,6 +3,8 @@
     <%@ page import="fr.mds.productmanager.dao.ProductDao" %>
     <%@ page import="java.util.List" %>
     <%@ page import="fr.mds.productmanager.model.Product" %>
+    
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,20 +14,17 @@
 <body>
 <%@ include file = "header.jsp" %>
 <br>
-<br>
-<%
 
-
-	List<Product> products = ProductDao.getAllProducts();
-
-	
-	for(Product p : products) {
-		out.println("<p>");
-		out.println(p.getId()+" -> "+p.getName()+" -> "+p.getPrice()+"€ ->"+p.getDescription());
-		out.println("</p>");
-	}
-
-%>
+<table>
+<c:forEach items="${products }" var="p">
+	<tr>
+		<td><c:out value="${p.id }"></c:out></td>
+		<td><c:out value="${p.name }"></c:out></td>
+		<td><c:out value="${p.price }"></c:out></td>
+		<td><c:out value="${p.description}"></c:out></td>
+	</tr>
+</c:forEach>
+</table>
 <br>
 <%@ include file = "footer.jsp" %>
 </body>
