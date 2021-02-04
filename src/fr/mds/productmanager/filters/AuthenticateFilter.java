@@ -16,8 +16,7 @@ public class AuthenticateFilter extends HttpFilter{
 	@Override
 	protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain)
 			throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		super.doFilter(req, res, chain);
+
 		
 		if (req.getSession().getAttribute("username") == null) {
 			

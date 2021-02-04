@@ -10,6 +10,7 @@
 <title>List Product Page</title>
 </head>
 <body>
+<%@ include file = "header.jsp" %>
 <%
 
 
@@ -22,5 +23,6 @@
 	}
 
 %>
+<%@ include file = "footer.jsp" %>
 </body>
 </html>
